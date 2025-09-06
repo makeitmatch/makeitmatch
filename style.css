@@ -44,7 +44,8 @@ a.interattivo:active {
 
 @font-face {
   font-family: 'PP Pangaia';
-  src: url('fonts/PP\ Pangaia\ -\ Free\ for\ Personal\ Use\ v1.0/PPPangaia-Medium.otf') format('otf');
+  src: url('fonts/PPPangaia_woff/PPPangaia-Medium.woff2') format('woff2'),
+    url('fonts/PPPangaia_woff/PPPangaia-Medium.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
