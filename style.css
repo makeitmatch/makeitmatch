@@ -695,7 +695,6 @@ p {
 
 .riquadroelo2 {
   background-color: #BC264B;
-
   flex-direction: column;
   color: #fff;
   display: flex;
@@ -813,7 +812,7 @@ p {
   display: flex;
   position: relative;
   align-self: flex-end;
-  right: 8rem;
+  margin-right: -14rem;
 
 }
 
@@ -989,8 +988,17 @@ p {
     object-fit: cover;
   }
 
+.allineamentorizzontale{
+  flex-direction: column;
+}
   .intersezione {
     top: 0rem;
+    width: 80vw;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .riquadroelo,.riquadroelo2 {
+    max-width: 60vw;
   }
 
   .paragraforicerca {
@@ -1028,10 +1036,14 @@ p {
     padding-top: 4rem;
   }
 
+
+
   .tipo1,
   .modulocentrato3 {
     margin-top: 0rem;
     margin-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .card {
@@ -1129,9 +1141,32 @@ p {
         0% calc(100% - 30px), 0% 30px)
   }
 
+  .allineamentorizzontale {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intersezione {
+    width: 80vw;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .riquadroelo {
+    max-width: 60vw;
+  }
+
+  .riquadroelo2 {
+    max-width: 60vw;
+  }
+
   .testo2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .fonti {
+    padding-top: 6rem;
   }
 
 }
@@ -1159,9 +1194,35 @@ p {
     padding: 2rem;
   }
 
-  .modulocentrato2 video {
+  .desktop-only {
+    display: none;
+  }
+
+  .modulocentrato2 {
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    background-position: right top;
+    background-size: 120vw;
     display: flex;
-    width: 80vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    color: white;
+    gap: 2rem;
+    padding: 25vw;
+  }
+
+  .CTAbanco {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin-bottom: -4rem;
+    text-align: flex-end;
+    justify-content: flex-end;
+    text-align: end;
+    gap: 2rem;
   }
 
   .card {
@@ -1439,23 +1500,21 @@ p {
     max-width: 100vw;
   }
 
+  .allineamentorizzontale {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .intersezione {
     display: flex;
     flex-direction: column;
     position: static;
     align-items: center;
-    justify-content: center;
-    top: 4rem;
-    padding-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    height: auto;
-    overflow-x: hidden;
+      justify-content: space-between;
   }
 
   .riquadroelo {
     background-color: #fff;
-    mix-blend-mode: difference;
     color: hsl(345, 66%, 44%);
     display: flex;
     flex-direction: column;
@@ -1464,7 +1523,7 @@ p {
     gap: 2rem;
     right: 2rem;
     padding: 2rem;
-    max-width: 80vw;
+    max-width: 60vw;
     clip-path: polygon(30px 0%, calc(100% - 30px) 0%,
         100% 30px, 100% calc(100% - 30px),
         calc(100% - 30px) 100%, 30px 100%,
@@ -1480,7 +1539,7 @@ p {
     align-self: last baseline;
     gap: 2rem;
     padding: 2rem;
-    max-width: 80vw;
+    max-width: 60vw;
     top: 1rem;
     clip-path: polygon(30px 0%, calc(100% - 30px) 0%,
         100% 30px, 100% calc(100% - 30px),
@@ -1575,10 +1634,23 @@ p {
 
   .testimonianze {
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    flex-direction: row;
+    overflow-x: auto;
+    /* Scorrimento orizzontale */
+    scroll-behavior: smooth;
+    /* Scroll fluido */
+    gap: 6rem;
   }
 
+  .testimonianza {
+    display: flex;
+    flex: 0 0 80vw;
+    align-items: center;
+  }
+
+  .testimonianza h3 {
+    font-size: 20px;
+  }
 
 }
 
@@ -1717,7 +1789,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding-top: 12rem;
+    padding-top: 8rem;
     max-width: 100%;
   }
 
@@ -1733,6 +1805,10 @@ p {
     padding-top: 6rem;
     gap: 2rem;
     width: 90vw;
+  }
+
+  .desktop-only {
+    display: none;
   }
 
   .CTA img {
@@ -2321,23 +2397,6 @@ p {
     transform: rotate(0deg);
   }
 
-  /* MODULOTipo5 */
-
-  .paragraforicerca {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    gap: 2rem;
-    color: #fff;
-    max-width: 100vw;
-  }
-
-
-
   .fonti {
     display: flex;
     position: relative;
@@ -2353,9 +2412,32 @@ p {
     max-width: 100vw;
   }
 
+  /* MODULOTipo5 */
+
+  .allineamentorizzontale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12rem;
+  }
+
+  .paragraforicerca {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 2rem;
+    color: #fff;
+    max-width: 100vw;
+  }
+
   .intersezione {
     display: flex;
     flex-direction: column;
+    width: auto;
     position: static;
     align-items: center;
     justify-content: center;
@@ -2368,9 +2450,6 @@ p {
   }
 
   .riquadroelo {
-    background-color: #fff;
-    mix-blend-mode: difference;
-    color: hsl(345, 66%, 44%);
     display: flex;
     flex-direction: column;
     position: static;
@@ -2488,9 +2567,32 @@ p {
 
   .testimonianze {
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    flex-direction: row;
+    overflow-x: auto;
+    /* Scorrimento orizzontale */
+    scroll-behavior: smooth;
+    /* Scroll fluido */
+    gap: 6rem;
   }
+
+  .testimonianza {
+    display: flex;
+    flex: 0 0 80vw;
+    align-items: center;
+  }
+
+  .testimonianza h3 {
+    font-size: 20px;
+  }
+
+.modulovideo {
+  margin-top: 6rem;
+
+}
+
+.modulovideo video {
+  width: 90vw;
+}
 
   /* DATINGWRAP */
   .datingwrap {
@@ -2512,5 +2614,3 @@ p {
   .datingwrap video:last-child {
     display: block;
   }
-
-}
