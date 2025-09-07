@@ -322,10 +322,10 @@ p {
 .testimonianze {
   display: flex;
   flex-direction: row;
-    overflow-x: auto;
-    /* Scorrimento orizzontale */
-    scroll-behavior: smooth;
-    /* Scroll fluido */
+  overflow-x: auto;
+  /* Scorrimento orizzontale */
+  scroll-behavior: smooth;
+  /* Scroll fluido */
   gap: 6rem;
 }
 
